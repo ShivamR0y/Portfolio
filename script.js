@@ -35,6 +35,9 @@ function generateRandomSquare() {
     trailLength++;
     addTrailSquare(color);
   });
+
+  // Schedule the next square generation at a random interval between 2 and 10 seconds
+  setTimeout(generateRandomSquare, getRandomInterval());
 }
 
 // Function to add a square to the trail
@@ -62,8 +65,13 @@ function onMouseMove(e) {
   });
 }
 
-// Generate random squares atrandom intervals between 1,000 and 10,000ms.
-setInterval(generateRandomSquare, Math.random()*10000);
+// Function to get a random interval between 2 and 10 seconds (2000ms to 10000ms)
+function getRandomInterval() {
+  return Math.random() * (10000 - 2000) + 2000;
+}
+
+// Generate the first square and set the random interval
+setTimeout(generateRandomSquare, getRandomInterval());
 
 // Event listener for mouse movement
 window.addEventListener("mousemove", onMouseMove);
