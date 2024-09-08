@@ -17,22 +17,23 @@
     width: 100%;
     height: 100%;
   }
-  
+  /*Cursor properties */
   .square {
-    width: 25px;
-    height: 25px;
-    background-color: white;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 255);
     position: absolute;
+    z-index: 10000;
   }
   
   .trail {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
   }
   
   .random-square {
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     background-color: red;
     animation: removeAfter10s 10s forwards;
   }
