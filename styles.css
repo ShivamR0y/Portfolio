@@ -9,6 +9,7 @@
     height: 100%;
     overflow: hidden;
     cursor: none; /* Hide default mouse cursor */
+    background-color: #0A0A0A;
   }
   
   #gameArea {
