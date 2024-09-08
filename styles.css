@@ -29,6 +29,8 @@
   .trail {
     width: 10px;
     height: 10px;
+    position: absolute;
+    z-index: 1;
   }
   
   .random-square {

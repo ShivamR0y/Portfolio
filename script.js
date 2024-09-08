@@ -55,19 +55,23 @@ function onMouseMove(e) {
   pointerSquare.style.top = `${e.clientY}px`;
   pointerSquare.style.left = `${e.clientX}px`;
 
+  // Update pointer position, centering the real cursor in the middle
+  pointerSquare.style.top = `${e.clientY - 15 / 2}px`;  //this is the width of the pointer square
+  pointerSquare.style.left = `${e.clientX - 15 / 2}px`;
+  
   // Update trail position with more spacing
   trail.forEach((square, index) => {
     const delay = (index + 1) * 30; // Increased spacing between trail squares
     setTimeout(() => {
-      square.style.top = `${e.clientY}px`;
-      square.style.left = `${e.clientX}px`;
+      square.style.top = `${e.clientY - 5}px`;
+      square.style.left = `${e.clientX - 5}px`;  //This is the half size of the trail square
     }, delay);
   });
 }
 
 // Function to get a random interval between 2 and 10 seconds (2000ms to 10000ms)
 function getRandomInterval() {
-  return Math.random() * (10000 - 2000) + 2000;
+  return Math.random() * (8500 - 1500) + 1500;
 }
 
 // Generate the first square and set the random interval
