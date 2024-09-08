@@ -42,5 +42,5 @@
   
   @keyframes removeAfter10s {
     0% { opacity: 1; }
-    100% { opacity: 1; } /* No fading, just immediate removal */
+    100% { opacity: .9; } /* No fading, just immediate removal */
   }

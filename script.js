@@ -36,7 +36,7 @@ function generateRandomSquare() {
     addTrailSquare(color);
   });
 
-  // Schedule the next square generation at a random interval between 2 and 10 seconds
+  // Schedule the next square generation at a random interval between 1.5 and 8.5 seconds
   setTimeout(generateRandomSquare, getRandomInterval());
 }
 
@@ -61,7 +61,7 @@ function onMouseMove(e) {
   
   // Update trail position with more spacing
   trail.forEach((square, index) => {
-    const delay = (index + 1) * 30; // Increased spacing between trail squares
+    const delay = (index + 1) * 35; // Increased spacing between trail squares
     setTimeout(() => {
       square.style.top = `${e.clientY - 5}px`;
       square.style.left = `${e.clientX - 5}px`;  //This is the half size of the trail square
@@ -75,7 +75,7 @@ function getRandomInterval() {
 }
 
 // Generate the first square and set the random interval
-setTimeout(generateRandomSquare, getRandomInterval());
+setTimeout(generateRandomSquare, 2000);
 
 // Event listener for mouse movement
 window.addEventListener("mousemove", onMouseMove);
