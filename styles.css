@@ -44,3 +44,17 @@
     0% { opacity: 1; }
     100% { opacity: .9; } /* No fading, just immediate removal */
   }
+
+  .right-content {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: #ffffff;
+    color: #FFF;
+font-family: "ABC Oracle Plus Variable Unlicensed Trial";
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-decoration-line: underline;
+  }
