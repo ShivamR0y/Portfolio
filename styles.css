@@ -7,7 +7,7 @@
   body, html {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     cursor: none; /* Hide default mouse cursor */
     background-color: #0A0A0A;
   }
@@ -17,27 +17,32 @@
     width: 100%;
     height: 100%;
   }
-  /*Cursor properties */
+  /*Cursor sqaure and its properties  */
   .square {
     width: 15px;
     height: 15px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 10000;
+    pointer-events: none;
+    transition: width 10s ease, height 10s ease; /* Smooth transition for size change */
   }
   
+  /*trail that follows the cursor*/
   .trail {
     width: 10px;
     height: 10px;
     position: absolute;
     z-index: 1;
+    pointer-events: none;
   }
-  
+  /*Random squares that appear*/
   .random-square {
     width: 11px;
     height: 11px;
     background-color: red;
     animation: removeAfter10s 10s forwards;
+    pointer-events: auto;
   }
   
   @keyframes removeAfter10s {
@@ -45,16 +50,96 @@
     100% { opacity: .9; } /* No fading, just immediate removal */
   }
 
-  .right-content {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .left-section {
     position: absolute;
-    top: 40px;
-    right: 40px;
-    color: #ffffff;
-    color: #FFF;
-font-family: "ABC Oracle Plus Variable Unlicensed Trial";
-font-size: 16px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-text-decoration-line: underline;
+    top: 30px;
+    left: 30px;
+    Color :white;
+  }
+
+  .right-section {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+  
+  .resume-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    background-color: transparent;  /* No background initially */
+    transition: background-color .3s ease, color .2s ease;  /* Smooth transition for hover effect */
+  }
+
+  .resume-link:hover {
+    background-color: white;  /* White background on hover */
+    color: black;             /* Black text on hover */
+    text-decoration: underline;  /* Keep the underline on hover */
+  }
+
+  .title {
+    Color :rgb(255, 255, 255);
+    font-size: 9pt;
+  }
+
+  .name, .description, .bio-text {
+    line-height: 1.5;
+  }
+  
+
+
+/* Assistive scroll divs */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-item {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+
+  /* CSS for the footer circles array */
+
+  .circle-grid {
+    display: grid;
+    grid-template-columns: repeat(90, 8px);
+    grid-template-rows: repeat(8, 8px);
+    row-gap: 1.5px;      /* Vertical gap between rows */
+    column-gap: 1px;  /* Horizontal gap between columns */
+    position: absolute;
+    left: 45vw;
+    bottom: 10vh;
+  }
+
+  /* Inactive circle */
+  .circle {
+      width: 6px;
+      height: 8px;
+      background-color: #323232;
+      border-radius: 50%;
+      transition: background-color 4s ease, box-shadow 4s ease;
+  }
+
+  .circle.on {
+      background-color: #FFB13C;
+      box-shadow: 0 0 6px #ff463ca5;
+      transition: background-color .3s ease, box-shadow .3s ease;
+  }
+
+  .circle.random-on {
+      background-color: #cd522d;
+      box-shadow: 0 0 6px #ff463ca5;
   }
