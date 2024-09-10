@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
               letter.forEach(position => {
                   circles[position].classList.add("on");
               });
-          }, index * 20); // Layered "turn on" effect
+          }, index * 15); // Layered "turn on" effect
       });
   }
 
