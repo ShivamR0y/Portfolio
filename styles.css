@@ -14,31 +14,39 @@
   
   #gameArea {
     width: 100%;
-    height: 100%;
+    height: 200%;
   }
+
+  ::selection {
+    background-color: #FFB13C;
+    color: #0A0A0A;
+  }
+
+
+
   /*Cursor sqaure and its properties  */
   .square {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     z-index: 10000;
     pointer-events: none;
     transition: width 10s ease, height 10s ease; /* Smooth transition for size change */
   }
-  
+
   /*trail that follows the cursor*/
   .trail {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     position: absolute;
     z-index: 1;
     pointer-events: none;
   }
   /*Random squares that appear*/
   .random-square {
-    width: 11px;
-    height: 11px;
+    width: 9px;
+    height: 9px;
     background-color: red;
     animation: removeAfter10s 10s forwards;
     pointer-events: auto;
@@ -46,16 +54,16 @@
   
   @keyframes removeAfter10s {
     0% { opacity: 1; }
-    100% { opacity: .9; } /* No fading, just immediate removal */
+    100% { opacity: .8; } /* No fading, just immediate removal */
   }
 
   .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 100px;
   }
 
   .left-section {
@@ -119,8 +127,8 @@
     row-gap: 1.5px;      /* Vertical gap between rows */
     column-gap: 1px;  /* Horizontal gap between columns */
     position: absolute;
-    left: 45vw;
-    bottom: 10vh;
+    right: 30px;
+    top: -30px;
   }
 
   /* Inactive circle */
@@ -129,7 +137,7 @@
       height: 8px;
       background-color: #323232;
       border-radius: 50%;
-      transition: background-color 4s ease, box-shadow 4s ease;
+      transition: background-color 5s ease, box-shadow 5s ease;
   }
 
   .circle.on {
@@ -139,6 +147,69 @@
   }
 
   .circle.random-on {
-      background-color: #cd522d;
+      background-color: #8e2d0f;
       box-shadow: 0 0 6px #ff463ca5;
+  }
+
+
+
+  .testimonial{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 46px;
+    padding: 100px;
+  }
+
+  
+/* footer css */
+  .footer {
+    width: 100%;              
+    height: 220px;     
+    padding: 50px 100px 40px 100px;      
+    background-color: #151515; 
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+
+  .footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .link_item{
+    color: #EF1A9E;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 24px;
+  }
+  .link_item:hover{
+    color: #ff8bd3;
+  }
+
+  .footer_description{
+    position: absolute;
+    right: 100px;
+    color: #FFB13C;
+    text-align: right;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .footer_description_link{
+    color: #FFB13C;
+    text-align: right;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 12px;
+    line-height: normal;
+    text-decoration: underline;
+  }
+
+  .footer_description_link:hover{
+    background: #FFB13C;
+    color: #0A0A0A;
   }
