@@ -151,13 +151,19 @@
       box-shadow: 0 0 6px #ff463ca5;
   }
 
+  .misc_projects{
+    height:1px;
+    border-width:0;
+    background-color:#272727
+  }
 
-
+  /* testimonial css */
   .testimonial{
     display: inline-flex;
     align-items: flex-start;
     gap: 46px;
-    padding: 100px;
+    margin: 100px;
+    color: white;
   }
 
   
