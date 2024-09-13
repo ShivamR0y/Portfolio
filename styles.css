@@ -37,16 +37,16 @@
 
   /*trail that follows the cursor*/
   .trail {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     z-index: 1;
     pointer-events: none;
   }
   /*Random squares that appear*/
   .random-square {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
     background-color: red;
     animation: removeAfter10s 10s forwards;
     pointer-events: auto;
@@ -115,7 +115,6 @@
   height: 100vh;
   scroll-snap-align: start;
 }
-
 
 
   /* CSS for the footer circles array */
