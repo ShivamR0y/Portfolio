@@ -4,23 +4,37 @@
     box-sizing: border-box;
   }
   
-  body, html {
-    width: 100%;
-    height: 100%;
-    /*overflow: hidden;*/
-    cursor: none; /* Hide default mouse cursor */
-    background-color: #0A0A0A;
+  @font-face {
+    font-family: "ABC_oracle_light";
+    src: url("Fonts/ABCOracle-Light-Trial.otf");
   }
-  
-  #gameArea {
-    width: 100%;
-    height: 200%;
+  @font-face {
+    font-family: "Instrument_serif_itallic";
+    src: url("Fonts/InstrumentSerif-Italic.ttf");
+  }
+
+  @font-face {
+    font-family: "ABC_oracle_thin";
+    src: url("Fonts/ABCOracle-Thin-Trial.otf");
   }
 
   ::selection {
     background-color: #FFB13C;
     color: #0A0A0A;
   }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    cursor: none; /* Hide default mouse cursor */
+    background-color: #0A0A0A;
+  }
+  
+  #gameArea {
+    width: 100%;
+    height: 100%;
+  }
+
 
 
 
@@ -43,6 +57,8 @@
     z-index: 1;
     pointer-events: none;
   }
+
+
   /*Random squares that appear*/
   .random-square {
     width: 10px;
@@ -57,6 +73,7 @@
     100% { opacity: .8; } /* No fading, just immediate removal */
   }
 
+
   .container {
     width: 100%;
     height: 100%;
@@ -65,43 +82,6 @@
     justify-content: space-between;
     padding: 100px;
   }
-
-  .left-section {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    Color :white;
-  }
-
-  .right-section {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-  }
-  
-  .resume-link {
-    color: white;
-    text-decoration: underline;
-    font-size: 1rem;
-    background-color: transparent;  /* No background initially */
-    transition: background-color .3s ease, color .2s ease;  /* Smooth transition for hover effect */
-  }
-
-  .resume-link:hover {
-    background-color: white;  /* White background on hover */
-    color: black;             /* Black text on hover */
-    text-decoration: underline;  /* Keep the underline on hover */
-  }
-
-  .title {
-    Color :rgb(255, 255, 255);
-    font-size: 9pt;
-  }
-
-  .name, .description, .bio-text {
-    line-height: 1.5;
-  }
-  
 
 
 /* Assistive scroll divs */
@@ -150,27 +130,159 @@
       box-shadow: 0 0 6px #ff463ca5;
   }
 
+
+
+
+
+
+
+
+  /**********************
+  Navbar in the top 
+  ***********************/
+  .navbar-text{
+    font-family: "ABC_oracle_light";
+    color: white;
+    display: flex;
+    margin: 0px 100px;
+    padding: 30px 0px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .resume-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    background-color: transparent;  /* No background initially */
+    transition: background-color .3s ease, color .2s ease;  /* Smooth transition for hover effect */
+  }
+
+  .resume-link:hover {
+    background-color: white;  /* White background on hover */
+    color: black;             /* Black text on hover */
+    text-decoration: underline;  /* Keep the underline on hover */
+  }
+
+
+  /**********************
+  Description about me
+  ***********************/
+  .landing_page{
+    font-family: "ABC_oracle_thin";
+    color:white;
+    height: 100vh;
+    margin-bottom: 100px;
+    overflow-y: hidden;
+  }
+
+  .description{
+    display: flex;
+    padding: 0px 100px;
+    margin-top: 160px;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .cute_emote{
+    position: absolute;
+    opacity: 0%;
+    background-color: transparent;
+  }
+
+  .cute_emote:hover{
+    position: absolute;
+    opacity: 100%;
+    background-color: #0A0A0A;
+  }
+
+  .description_column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+    font-size: 14px; 
+  }
+
+  .bigger_text{
+    font-size: 24px; 
+    height: 90px; 
+    align-self: stretch;
+    text-transform: uppercase;
+  }
+
+  .timeline_column{
+    display: flex;
+    width: 215px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  .timeline_member{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+
+  /**********************
+  logos of companies
+  ***********************/
+  .images{
+    margin:60px 500px 0px 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+
+  /**********************
+  Miscellaneous projects
+  ***********************/
   .misc_projects{
+    font-family: "ABC_oracle_light";
+    margin: 100px 100px 30px 100px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  .line_separator{
     height:1px;
     border-width:0;
     background-color:#272727
   }
 
-  /* testimonial css */
+  
+  /**********************
+  Testimonial
+  ***********************/
   .testimonial{
+    font-family: "Instrument_serif_itallic";
     display: inline-flex;
     align-items: flex-start;
     gap: 46px;
-    margin: 100px;
+    margin: 100px 100px 150px 100px;
     color: white;
   }
 
-  
-/* footer css */
+
+  /**********************
+  Footer
+  ***********************/
   .footer {
-    width: 100%;              
-    height: 220px;     
-    padding: 50px 100px 40px 100px;      
+    font-family: "ABC_oracle_light";
+    width: 100%;    
+    padding: 50px 100px 150px 100px;      
     background-color: #151515; 
     position: absolute;
     display: flex;
@@ -183,14 +295,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 18px;
   }
 
   .link_item{
     color: #EF1A9E;
     text-shadow: 0px 0px 4px #FF473C;
-    font-size: 24px;
+    font-size: 18px;
   }
+
   .link_item:hover{
     color: #ff8bd3;
   }
@@ -218,3 +331,88 @@
     background: #FFB13C;
     color: #0A0A0A;
   }
+
+
+  /**********************
+  Navbar SVG floater
+  ***********************/
+ 
+  .centered-svgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px;
+  }
+  
+  .centered-svgs a {
+    margin: 0 20px;
+    text-decoration: none;
+  }
+  
+  .nav-icon {
+    fill: grey;
+    width: 100px;
+    height: 100px;
+    transition: fill 0.3s;
+  }
+  
+  /* Hover Effects */
+  #icon1:hover,
+  #nav-icon1:hover {
+    fill: #FFC700;
+  }
+  
+  #icon2:hover,
+  #nav-icon2:hover {
+    fill: #2AB1E4;
+  }
+  
+  #icon3:hover,
+  #nav-icon3:hover {
+    fill: #EF1A9E;
+  }
+  
+  /* Active Icon */
+  .nav-icon.active#icon1,
+  .nav-icon.active#nav-icon1 {
+    fill: #FFC700;
+  }
+  
+  .nav-icon.active#icon2,
+  .nav-icon.active#nav-icon2 {
+    fill: #2AB1E4;
+  }
+  
+  .nav-icon.active#icon3,
+  .nav-icon.active#nav-icon3 {
+    fill: #EF1A9E;
+  }
+  
+  /* Navbar that fades in */
+  #floating-svgs {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+  }
+  
+  #floating-svgs a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .small-icon {
+    width: 40px;
+    height: 40px;
+    fill: grey;
+    transition: fill 0.3s;
+  }
+  
+  /* Navbar visible after scrolling */
+  #floating-svgs.visible {
+    opacity: 1;
+  }
+  

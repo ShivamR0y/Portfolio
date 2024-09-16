@@ -18,9 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const pointerSquare = document.createElement("div");
   pointerSquare.classList.add("square");
   gameArea.appendChild(pointerSquare);
+  
 
   // Random colors for the random squares
   const randomColors = ['#FFC700', '#2AB1E4', '#EF1A9E'];
+
+
 
   // Function to generate random squares
   function generateRandomSquare() {
@@ -51,6 +54,23 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(generateRandomSquare, getRandomInterval());
   }
 
+
+
+    // Function to generate the initial trail
+    //this is added on please check and remove if required
+    function initializeTrail() {
+      for (let i = 0; i < 1; i++) {
+        const trailSquare = document.createElement("div");
+        trailSquare.classList.add("square", "trail");
+        trailSquare.style.backgroundColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+        
+        // Add the trail square to the trail array and document
+        gameArea.appendChild(trailSquare);
+        trail.push(trailSquare);
+      }
+    }
+
+
   // Function to add a square to the trail
   function addTrailSquare(color) {
     const trailSquare = document.createElement("div");
@@ -63,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle mouse movement and control the trail
   function onMouseMove(e) {
     // Update pointer position, centering the real cursor in the middle, sa well as considering the entire page width and height
-    pointerSquare.style.top = `${e.pageY - 15 / 2}px`;  //this is the width of the pointer square
-    pointerSquare.style.left = `${e.pageX - 15 / 2}px`;
+    pointerSquare.style.top = `${e.pageY - 14 / 2}px`;  //this is the width of the pointer square
+    pointerSquare.style.left = `${e.pageX - 14 / 2}px`;
     
     // Update trail position with more spacing
     trail.forEach((square, index) => {
@@ -82,10 +102,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Generate the first square and set the random interval
+  initializeTrail();
   setTimeout(generateRandomSquare, 1000);
+  
 
   // Event listener for mouse movement
   window.addEventListener("mousemove", onMouseMove);
+  
+
+  
 
 
 
@@ -166,4 +191,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   randomOnCircles(); // Start random lights on page load
 
+});
+
+
+// JavaScript to handle navbar visibility on scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('floating-svgs');
+  const scrollPosition = window.scrollY || window.pageYOffset;
+  const viewportHeight = window.innerHeight;
+
+  if (scrollPosition > viewportHeight) {
+    navbar.classList.add('visible');
+  } else {
+    navbar.classList.remove('visible');
+  }
 });
