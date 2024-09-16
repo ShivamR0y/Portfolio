@@ -6,16 +6,16 @@
   
   @font-face {
     font-family: "ABC_oracle_light";
-    src: url("Fonts/ABCOracle-Light-Trial.otf");
+    src: url("ABCOracle-Light-Trial.otf");
   }
   @font-face {
-    font-family: "Instrument_serif_itallic";
-    src: url("Fonts/InstrumentSerif-Italic.ttf");
+    font-family: "ITC_garamond_itallic";
+    src: url("ITC\ Garamond\ Std\ Light\ Narrow\ Italic.otf");
   }
 
   @font-face {
     font-family: "ABC_oracle_thin";
-    src: url("Fonts/ABCOracle-Thin-Trial.otf");
+    src: url("ABCOracle-Thin-Trial.otf");
   }
 
   ::selection {
@@ -267,7 +267,7 @@
   Testimonial
   ***********************/
   .testimonial{
-    font-family: "Instrument_serif_itallic";
+    font-family: "ITC_garamond_itallic";
     display: inline-flex;
     align-items: flex-start;
     gap: 46px;
