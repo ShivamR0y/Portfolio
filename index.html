@@ -1,3 +1,13 @@
+<!--
+
+░█▀█░█░█░░░█░█░▀█▀░░░▀█▀░█░█░█▀▀░█▀▄░█▀▀░░░░░░░█▀█
+░█░█░█▀█░░░█▀█░░█░░░░░█░░█▀█░█▀▀░█▀▄░█▀▀░░░░▀░░█▀▀
+░▀▀▀░▀░▀░░░▀░▀░▀▀▀░░░░▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░░░░▀░░▀░░
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +17,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div  class="grain"></div>
+  <!-- NOISE NOISE NOISE NOISE NOISE 
+  <canvas id="noise" class="noise"></canvas>
+  -->
   <!-- Game area -->
   <div id="gameArea">
 
-
+    
     <!--Landing deets-->
     <div class="landing_page">
 
@@ -19,10 +33,10 @@
         <!-- Left section-->
         <div>
           <p style="font-size: 14px;"><span style="position: absolute; left: 80px;">✻</span>hq&nbsp;  •&nbsp;  shivamroy.in</p>
-          <p style="font-size: 10px; margin-top: 4px;">Bachelor's of Design student<br>@IIT Guwahati, India</p>
+          <p style="font-size: 10px; margin-top: 4px;">IIT Guwahati, India</p>
         </div>
         <!-- Right section -->
-          <a href="Shivam Kumar Roy_210205048.pdf" class="resume-link" target="_blank">• Resume.pdf</a>
+          <a href="PDFs/Shivam Kumar Roy_210205048.pdf" class="resume-link" target="_blank">• Resume.pdf</a>
       </div>
 
       <!-- SVG Navbar static -->
@@ -100,18 +114,18 @@
 
       <!--description-->
       <div class="description">
-        <p class="cute_emote">(｡◕‿‿◕｡)</p>
         <div class="description_column">
-          <p class="bigger_text">SHIVAM IS A PASSIONATE INDIVIDUAL
-            INSPIRED BY CHALLENGES AND DRIVEN TO DELIVER THE BEST.
+          <p class="cute_emote">(｡◕‿‿◕｡)</p>
+          <p class="bigger_text">INSPIRED BY CHALLENGES, DRIVEN TO DELIVER THE BEST.
           </p>
-          <p style="align-self: stretch; color: #dddddd;">Lorem ipsum lorem ipsum lorem ipsum.
-            Lorem ipsum lorem ipsum lorem ipsum.</br>
-            He is always interested in hearing about new ideas,
+          <p style="align-self: stretch; color: #dddddd;">
+            Shivam is a final year B.des student at IIT Guwahati,
+            always interested in new ideas,
             breaking them apart and thinking then through.
           </p>
         </div>
 
+        
         <div class="timeline_column">
 
           <div class="timeline_member">
@@ -137,20 +151,21 @@
         </div>
 
         <div class="description_column">
-          <p class="bigger_text">Currently trying to solve problems with digital interactions.
+          <p class="bigger_text">Currently solving problems using digital interactions.
           </p>
-          <p style="align-self: stretch; color: #dddddd;">In his free time catch him laid back reading a book, 
-            cooking or going for a run around the campus.
+          <p style="align-self: stretch; color: #dddddd;">In his free time catch him reading a book, 
+           listening to music, or going down rabbit holes on the internet.
           </p>
         </div>
+
       </div>
 
       
       <!--logos-->
       <div class="images">
-        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 170px;" src="Nutanix.png">
-        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 135px;" src="99acres.png">
-        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 135px;" src="infoedge.png">
+        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 170px;" src="images/Nutanix.png">
+        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 135px;" src="images/99acres.png">
+        <img style="height: 100%; width: 100%; object-fit: contain; max-width: 135px;" src="images/infoedge.png">
       </div>
 
     </div>
@@ -228,27 +243,43 @@
 
 
 
-    <!-- Div for assistive scroll of each projects 
+    <p class="section_heading"> work </p>
+<!--Div for each projects-->
+    <div class="projects-container">
+      <div class="projects" style="background-color: rgb(126, 119, 106);">
+        <div class = "project-heading-container">
+          <p class="project-heading">Helping Nutanix build a unified storage</p>
+          <p class="project-heading" style="text-align: right;"> access platform.</p>
+        </div>
 
+        <div class="project-description-container">
+          <p style="flex: 1 0 0;">In the summer of 2024 I worked with the amazing design team at Nutanix.
+             During my time there, I worked on a feature that enabled businesses to access 
+             their storage through a single URL irrespective of the storage platform used.
+          </p>
+          <p style="flex: 1 0 0;">My work included pitching ideas to decision makers like
+             the Product Manager, regular syncs with lead developers, 
+             and project discussions with other designers.
+          </p>
+        </div>
 
-    <div class="scroll-container"></div>
-      <div class="scroll-item" style="background-color: rgb(87, 87, 87);">
-          Section 1
       </div>
-      <div class="scroll-item" style="background-color: rgb(59, 59, 59);">
+
+
+      <div class="scroll-item" style="background-color: royalblue;">
           Section 2
       </div>
       <div class="scroll-item" style="background-color: lightcoral;">
           Section 3
       </div>
     </div>
+
+
+
     
-
-  -->
-      
-
-    <!-- Projects -->
+    <!-- other Projects -->
     <div class ="misc_projects">
+      <p class="section_heading" style="margin: 0px 0px;"> Experimentations </p>
       <hr class="line_separator">
       <div style="padding: 30px 0px;">Project title 1</div>
       <!--  <img src="https://via.placeholder.com/150" alt="Sample Image" style="position: absolute; left: 0; right: 0; margin: auto;">  -->
@@ -264,7 +295,7 @@
       <p>(ಡ_ಡ) ☞</p>
       <div style ="display: flex; flex-direction: column; align-items: flex-end;"> 
         <span style="font-size: 24px;">“I  like the way he works. He understood the requirements and asked lot of questions for better understanding. Shivam takes feedbacks positively and tries to think from different perspectives. His need to give better attitude is great.”</span>
-        <span></br>• a stakeholder at NUTANIX</span>
+        <span><br>• a stakeholder at NUTANIX</span>
       </div>
     </div>
 
@@ -278,7 +309,7 @@
         <a href="https://open.spotify.com/playlist/75i4CcqYvd467Ncgzu2Luu" style ="text-decoration: none;" target="_blank" >
           <p class="link_item">Spotify&nbsp;&nbsp;✿</p>
         </a>
-        <a href="Shivam Kumar Roy_210205048.pdf" style ="text-decoration: none;" target="_blank" >
+        <a href="PDFs/Shivam Kumar Roy_210205048.pdf" style ="text-decoration: none;" target="_blank" >
           <p  class="link_item"> <span style="text-decoration: underline;">Resume.pdf</span><span style ="text-decoration: none;">&nbsp;&nbsp;✿</span></p>
         </a>
       </div>
@@ -288,10 +319,14 @@
       <!-- Footer div for contact me -->
       <div class="circle-grid" id="circleGrid"></div>
     </div>
-  
   </div>
+
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
 

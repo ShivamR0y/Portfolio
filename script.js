@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to generate the initial trail
     //this is added on please check and remove if required
     function initializeTrail() {
-      for (let i = 0; i < 1; i++) {
+      for (let i = 0; i < 3; i++) {
         const trailSquare = document.createElement("div");
         trailSquare.classList.add("square", "trail");
         trailSquare.style.backgroundColor = randomColors[Math.floor(Math.random() * randomColors.length)];
@@ -194,7 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// JavaScript to handle navbar visibility on scroll
+
+
+// JavaScript to handle navbar visibility on scroll of floating navbar
 window.addEventListener('scroll', function() {
   const navbar = document.getElementById('floating-svgs');
   const scrollPosition = window.scrollY || window.pageYOffset;
@@ -206,3 +208,41 @@ window.addEventListener('scroll', function() {
     navbar.classList.remove('visible');
   }
 });
+
+
+
+
+
+
+//NOISE for the page NOISE (Closed because its very energy intensive)
+/*
+
+const canvas = document.getElementById('noise');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+function drawNoise() {
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    for (let i = 0; i < data.length; i += 4) {
+        const color = Math.random() * 255;
+        data[i] = color;
+        data[i + 1] = color;
+        data[i + 2] = color;
+        data[i + 3] = 255;
+    }
+    ctx.putImageData(imageData, 0, 0);
+    requestAnimationFrame(drawNoise);
+}
+
+drawNoise();
+
+// Add class to animate
+setTimeout(() => {
+    canvas.classList.add('noise-animate');
+}, 1);
+
+*/
+//NOISE for the page NOISE
