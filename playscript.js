@@ -194,3 +194,19 @@ randomOnCircles(); // Start random lights on page load
  
 });  
 
+
+
+
+// JavaScript to handle navbar visibility on scroll of floating navbar
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('floating-svgs');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight/2;
+  
+    if (scrollPosition > viewportHeight) {
+      navbar.classList.add('visible');
+    } else {
+      navbar.classList.remove('visible');
+    }
+  });
+  

@@ -135,6 +135,8 @@
     ***********************/
     .header {
         padding: 50px 100px;
+        color: #FFF;
+        font-family: "ABC_oracle_light";
     
         .text_container{
             display: flex;
@@ -144,7 +146,6 @@
     
         }
         .primary_text{
-            color: #FFF;
             font-family: "ABC_oracle_heavy";
             font-size: 96px;
             line-height: 86px;
@@ -153,15 +154,11 @@
     
         .secondary_text{
             width: 310px;
-            color: #FFF;
             text-align: right;
-            font-family: "ABC_oracle_light";
             font-size: 12px;
         }
     
         .smallest_text{
-            color: #FFF;
-            font-family: "ABC_oracle_light";
             font-size: 8px;
             text-transform: uppercase;
             opacity: 80%;
@@ -184,20 +181,17 @@
     
         .floating_ascii{
             position: absolute;
-            color: #FFF;
             font-family: "ABC_oracle_light";
             font-size: 16px;
         }
     
         .quoted_text{
             align-self: stretch;
-            color: #FFF;
             font-family: "ITC_garamond_itallic";
             font-size: 32px;
         }
         
         .secondary_quote{
-            color: #FFF;
             font-family: "ABC_oracle_light";
             font-size: 16px;
             align-self: stretch;
@@ -355,6 +349,92 @@ img {
   .circle.random-on {
       background-color: #8e2d0f;
       box-shadow: 0 0 6px #ff463ca5;
+  }
+
+
+
+  /**********************
+  Navbar SVG floater
+  ***********************/
+ 
+  .centered-svgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+    }
+  .centered-svgs a {
+    margin: 0 20px;
+    text-decoration: none;
+  }
+  
+  .nav-icon {
+    fill: grey;
+    width: 200px;
+    height: 200px;
+    transition: fill 0.1s;
+  }
+  
+  /* Hover Effects */
+  #icon1:hover,
+  #nav-icon1:hover {
+    fill: #FFC700;
+  }
+  
+  #icon2:hover,
+  #nav-icon2:hover {
+    fill: #2AB1E4;
+  }
+  
+  #icon3:hover,
+  #nav-icon3:hover {
+    fill: #EF1A9E;
+  }
+  
+  /* Active Icon */
+  .nav-icon.active#icon1,
+  .nav-icon.active#nav-icon1 {
+    fill: #FFC700;
+  }
+  
+  .nav-icon.active#icon2,
+  .nav-icon.active#nav-icon2 {
+    fill: #2AB1E4;
+  }
+  
+  .nav-icon.active#icon3,
+  .nav-icon.active#nav-icon3 {
+    fill: #EF1A9E;
+  }
+  
+  /* Navbar that fades in */
+  #floating-svgs {
+    pointer-events: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    z-index: 1000;
+  }
+  
+  #floating-svgs a {
+    text-decoration: none;
+  }
+  
+  .small-icon {
+    width: 40px;
+    height: 40px;
+    fill: grey;
+    transition: fill 0.1s;
+    margin-right: 10px;
+  }
+  
+  /* Navbar visible after scrolling */
+  #floating-svgs.visible {
+    pointer-events: auto;
+    opacity: 1;
   }
 
 
