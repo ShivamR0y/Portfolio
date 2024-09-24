@@ -630,7 +630,7 @@
       height: 8px;
       background-color: #323232;
       border-radius: 50%;
-      transition: background-color 5s ease, box-shadow 5s ease;
+      transition: background-color 6s ease, box-shadow 6s ease;
   }
 
   .circle.on {

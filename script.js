@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [145,149,235,236,238,239,325,327,329,415,419,505,509,595,599], //M
     [152,153,154,155,156,242,332,422,423,424,512,602,603,604,605,606],  //E
     [159,249,339,429,609],  //!
+    [166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 256, 257, 258, 263, 264, 265, 346, 348, 349, 352, 353, 355, 436, 439, 440, 441, 442, 445, 526, 535, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625],  // sign
   ];
 
   function turnOnCircles() {
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
               letter.forEach(position => {
                   circles[position].classList.add("on");
               });
-          }, index * 10); // Layered "turn on" effect
+          }, index * 8); // Layered "turn on" effect
       });
   }
 
