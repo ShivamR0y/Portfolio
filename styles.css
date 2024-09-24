@@ -533,7 +533,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    align-self: stretch;
   }
 
   .footer_links {

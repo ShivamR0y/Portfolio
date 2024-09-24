@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  //break between two difference JS
+  //BREAK BREAK BREAK BREAK BREAK BREAK
 
   // Create the grid of circles
   for (let i = 0; i < totalCircles; i++) {
