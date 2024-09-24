@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const randomColors = ['#FFC700', '#2AB1E4', '#EF1A9E'];
 
 
-
   // Function to generate random squares
   function generateRandomSquare() {
     const randomSquare = document.createElement("div");
@@ -247,3 +246,4 @@ setTimeout(() => {
 
 */
 //NOISE for the page NOISE
+

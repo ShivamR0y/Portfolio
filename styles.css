@@ -46,7 +46,7 @@
     color: white;
     opacity: 40%;
     font-size: 14px;
-    font-family: "ABC_oracle_light";
+    font-family: "ABC_oracle_thin";
     margin: 40px 100px 0px 100px;
   }
 
@@ -262,7 +262,7 @@
   Navbar in the top 
   ***********************/
   .navbar-text{
-    font-family: "ABC_oracle_light";
+    font-family: "ABC_oracle_thin";
     color: white;
     display: flex;
     padding: 30px 100px;
@@ -357,7 +357,7 @@
   */
 
   .text_container{
-    font-family: "ABC_oracle_light";
+    font-family: "ABC_oracle_thin";
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -452,8 +452,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    height: 100vh;
-    padding: 100px 100px;
+    height: 60vh;
+    margin: 100px;
   }
   
   .project_image_container{
@@ -465,7 +465,6 @@
     gap: 10px;
     flex: 1 0 0;
     align-self: stretch;
-    background: #FF6A3C;
     border-radius: 5px;
   }
   
@@ -492,7 +491,7 @@
   
     color: white;  
     font-family: "ABC_oracle_thin";
-    font-size: 16px;
+    font-size: 12px;
   }
   
   .project_details{
@@ -514,7 +513,7 @@
       .project_description{
         flex: 1 0 0;
         align-self: stretch;
-        font-family: "ABC_oracle_light";
+        font-family: "ABC_oracle_thin";
         font-size: 14px;
         color: white;
       }
@@ -528,7 +527,7 @@
   Miscellaneous projects
   ***********************/
   .misc_projects{
-    font-family: "ABC_oracle_light";
+    font-family: "ABC_oracle_thin";
     margin: 100px 100px 30px 100px;
     color: white;
     text-transform: uppercase;
@@ -559,7 +558,7 @@
   Footer
   ***********************/
   .footer {
-    font-family: "ABC_oracle_light";
+    font-family: "ABC_oracle_thin";
     width: 100%;    
     padding: 50px 100px 150px 100px;      
     background-color: #151515; 
