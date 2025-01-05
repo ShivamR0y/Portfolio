@@ -180,7 +180,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 35px 0px;
+    padding: 15px 0px 30px 0px;
   }
   
   .centered-svgs a {
@@ -360,35 +360,38 @@
     font-family: "ABC_oracle_thin";
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 100px 40px 95px;
+    align-items: top;
+    padding: 20px 100px 0px 95px;
     color: #FFF;
+
 
   .primary_text{
     font-family: "ABC_oracle_heavy";
     font-size: 86px;
     line-height: 70px;
-    width: 55%;
+    width: 70%;
   }
 
-  .secondary_container{
-    display: flex;
-    width: 310px;
+  .secondary_text{
+    font-size: 12px;
+    max-width: 35%;
+  }
+
+  .right_column{
+    display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-shrink: 0;
-    align-self: stretch;
+    align-items:flex-end;
+    width: 50%;
+    gap: 24px;
   }
 
   .timeline_column{
+    color: white;
     display: flex;
-    width: 215px;
+    width: 80%;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-shrink: 0;
-    height: 50%;
+    gap: 20px;
   }
 
   .timeline_member{
@@ -400,31 +403,18 @@
     font-size: 12px;
   }
 
-  .secondary_text{
-    text-align: right;
-    font-size: 12px;
-  }
-
+  .floating_text_container{
+    font-family: "ITC_garamond_itallic";
+    font-size: 28px;
+    background-color:#EF1A9E;
+    width: 135%;
+    
+}
   .floating_ascii{
     position: absolute;
     font-size: 12px;
     opacity:0;
     }
-
-    .floating_text_container{
-      display: flex;
-      width: 400px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-      position: absolute;
-      top: 20%;
-      left:48%;
-      font-family: "ITC_garamond_itallic";
-      font-size: 28px;
-    background-color:#EF1A9E;
-      
-  }
 }
 
 
@@ -454,6 +444,8 @@
     gap: 20px;
     height: 60vh;
     margin: 100px;
+    background: #FF6A3C;
+    border-radius: 5px;
   }
   
   .project_image_container{
@@ -465,7 +457,6 @@
     gap: 10px;
     flex: 1 0 0;
     align-self: stretch;
-    border-radius: 5px;
   }
   
   .project_image{
