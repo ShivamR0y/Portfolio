@@ -152,7 +152,7 @@
   .trail {
     width: 12px;
     height: 12px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     pointer-events: none;
   }
