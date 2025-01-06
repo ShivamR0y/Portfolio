@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
   
     // Function to generate random squares
+    /*
+    I have edited the timeout here so that no new squares appear on the case study pages. ^^
+    */ 
 
     function generateRandomSquare() {
       const randomSquare = document.createElement("div");
@@ -41,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (randomSquare.parentNode) {
           randomSquare.parentNode.removeChild(randomSquare);
         }
-      }, 8000);
+      }, 1);
+      // ^^ changed timeout from 8000 to 1 for the first square
 
       // Add event listener to pop the square and grow the trail
       randomSquare.addEventListener("mouseover", () => {
@@ -52,15 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   
       // Schedule the next square generation at a random interval
-      setTimeout(generateRandomSquare, getRandomInterval());
+      //setTimeout(generateRandomSquare, getRandomInterval());
+      // ^^ commented out calling of new squares
     }
-  
+
   
   
       // Function to generate the initial trail
       //this is added on please check and remove if required
       function initializeTrail() {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 3; i++) {
           const trailSquare = document.createElement("div");
           trailSquare.classList.add("square", "trail");
           trailSquare.style.backgroundColor = randomColors[Math.floor(Math.random() * randomColors.length)];
@@ -99,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Function to get a random interval
     function getRandomInterval() {
-      return Math.random() * (3000 - 800) + 800;
+        return Math.random() * (8000 - 1500) + 1500;
     }
   
     // Generate the first square and set the random interval
@@ -202,7 +207,7 @@ randomOnCircles(); // Start random lights on page load
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('floating-svgs');
     const scrollPosition = window.scrollY || window.pageYOffset;
-    const viewportHeight = window.innerHeight/2;
+    const viewportHeight = window.innerHeight/1.5;
   
     if (scrollPosition > viewportHeight) {
       navbar.classList.add('visible');
@@ -211,3 +216,49 @@ window.addEventListener('scroll', function() {
     }
   });
   
+
+  document.addEventListener('scroll', function () {
+    const fixedDiv = document.querySelector('.floating_nav');
+    const parent = document.querySelector('.all_content');
+    const parentRect = parent.getBoundingClientRect();
+
+    if (parentRect.top < 0) {
+        fixedDiv.classList.add('sticky');
+    } else {
+        fixedDiv.classList.remove('sticky');
+    }});
+
+
+
+
+    // Get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// Add an event listener listening for scroll
+document.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+  
+  // Get current scroll position
+  let scrollY = window.pageYOffset;
+  
+  // Now we loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+    
+    /*
+    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active_nav");
+    } else {
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active_nav");
+    }
+  });
+}

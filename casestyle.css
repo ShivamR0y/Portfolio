@@ -5,6 +5,12 @@
     scroll-behavior: smooth;
 
   }
+
+
+  @font-face {
+    font-family: "ABC_oracle_thin";
+    src: url("Fonts/ABCOracle-Thin-Trial.otf");
+  }
   
   @font-face {
     font-family: "ABC_oracle_light";
@@ -131,229 +137,33 @@
 
 
     /**********************
-    Header
-    ***********************/
-    .header {
-        padding: 50px 100px;
-        color: #FFF;
-        font-family: "ABC_oracle_light";
-    
-        .text_container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            align-self: stretch;
-    
-        }
-        .primary_text{
-            font-family: "ABC_oracle_heavy";
-            font-size: 96px;
-            line-height: 86px;
-            width: 50%;
-        }
-    
-        .secondary_text{
-            width: 310px;
-            text-align: right;
-            font-size: 12px;
-        }
-    
-        .smallest_text{
-            font-size: 8px;
-            text-transform: uppercase;
-            opacity: 80%;
-        }
-    
-    
-    
-        .floating_text_container{
-            display: flex;
-            width: 460px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            position: absolute;
-            background-color:#2AB1E4;
-            top: 30%;
-            left:30%;
-            
-        }
-    
-        .floating_ascii{
-            position: absolute;
-            font-family: "ABC_oracle_light";
-            font-size: 16px;
-        }
-    
-        .quoted_text{
-            align-self: stretch;
-            font-family: "ITC_garamond_itallic";
-            font-size: 32px;
-        }
-        
-        .secondary_quote{
-            font-family: "ABC_oracle_light";
-            font-size: 16px;
-            align-self: stretch;
-        }
-    
-    }
-
-    
-
-  /**********************
-  Images columns
+  Navbar in the top 
   ***********************/
-
-
-.images_container {
+  .navbar-text{
+    font-family: "ABC_oracle_thin";
+    color: white;
     display: flex;
-    justify-content: space-around;
-    padding: 100px;
-    align-items: flex-start;
-    gap: 15px;
-
-.images_column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 0 0;
-
-.image-box {
-    margin-bottom: 40px;
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-}
-}
-}
-
-.image_description {
-    font-family: "ABC_oracle_light";
-    text-transform: uppercase;
-    font-size: 10px;
-    margin-top: -2px;
-    color: rgb(196, 196, 196);
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
-
-.first_line{
-    display: flex;
+    padding: 30px 100px;
     justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-.second_line{
-    color: #7f7f7f;
-    font-size: 8px;
-}
-}
+    align-items: flex-start;
+  }
 
+  .resume-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    background-color: transparent;  
+    transition: background-color .3s ease, color .2s ease; 
+  }
 
+  .resume-link:hover {
+    background-color: white;  
+    color: black;             
+    text-decoration: underline;  
+  }
 
 
 /**********************
-  Footer
-  ***********************/
-  .footer {
-    font-family: "ABC_oracle_light";
-    width: 100%;    
-    padding: 50px 100px 150px 100px;      
-    background-color: #151515; 
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  
-
-  .footer_links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-
-  .link_item{
-    color: #ff14a5;
-    text-shadow: 0px 0px 4px #FF473C;
-    font-size: 18px;
-  }
-
-  .link_item:hover{
-    color: #ff8bd3;
-  }
-
-  .footer_description{
-    position: absolute;
-    right: 100px;
-    color: #FFB13C;
-    text-align: right;
-    text-shadow: 0px 0px 4px #FF473C;
-    font-size: 12px;
-    line-height: normal;
-  }
-
-  .footer_description_link{
-    color: #FFB13C;
-    text-align: right;
-    text-shadow: 0px 0px 4px #FF473C;
-    font-size: 12px;
-    line-height: normal;
-    text-decoration: underline;
-  }
-
-  .footer_description_link:hover{
-    background: #FFB13C;
-    color: #0A0A0A;
-  }
-
-}
-
-
-
-
-  /**********************
-  Circle grid for contact me
-  ***********************/
-  .circle-grid {
-    display: grid;
-    grid-template-columns: repeat(90, 8px);
-    grid-template-rows: repeat(8, 8px);
-    row-gap: 1.5px;
-    column-gap: 1px;
-    position: absolute;
-    right: 30px;
-    top: -30px;
-  }
-  
-  .circle {
-      width: 6px;
-      height: 8px;
-      background-color: #323232;
-      border-radius: 50%;
-      transition: background-color 6s ease, box-shadow 6s ease;
-  }
-
-  .circle.on {
-      background-color: #FFB13C;
-      box-shadow: 0 0 6px #ff463ca5;
-      transition: background-color .3s ease, box-shadow .3s ease;
-  }
-
-  .circle.random-on {
-      background-color: #8e2d0f;
-      box-shadow: 0 0 6px #ff463ca5;
-  }
-
-
-
-  /**********************
   Navbar SVG floater
   ***********************/
  
@@ -439,3 +249,205 @@ img {
 
 
 
+/**********************
+  Footer
+  ***********************/
+  .footer {
+    font-family: "ABC_oracle_light";
+    width: 100%;    
+    padding: 50px 100px 150px 100px;      
+    background-color: #151515; 
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  
+
+  .footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .link_item{
+    color: #ff14a5;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 18px;
+  }
+
+  .link_item:hover{
+    color: #ff8bd3;
+  }
+
+  .footer_description{
+    position: absolute;
+    right: 100px;
+    color: #FFB13C;
+    text-align: right;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .footer_description_link{
+    color: #FFB13C;
+    text-align: right;
+    text-shadow: 0px 0px 4px #FF473C;
+    font-size: 12px;
+    line-height: normal;
+    text-decoration: underline;
+  }
+
+  .footer_description_link:hover{
+    background: #FFB13C;
+    color: #0A0A0A;
+  }
+
+}
+
+
+
+  /**********************
+  Circle grid for contact me
+  ***********************/
+  .circle-grid {
+    display: grid;
+    grid-template-columns: repeat(90, 8px);
+    grid-template-rows: repeat(8, 8px);
+    row-gap: 1.5px;
+    column-gap: 1px;
+    position: absolute;
+    right: 30px;
+    top: -30px;
+  }
+  
+  .circle {
+      width: 6px;
+      height: 8px;
+      background-color: #323232;
+      border-radius: 50%;
+      transition: background-color 6s ease, box-shadow 6s ease;
+  }
+
+  .circle.on {
+      background-color: #FFB13C;
+      box-shadow: 0 0 6px #ff463ca5;
+      transition: background-color .3s ease, box-shadow .3s ease;
+  }
+
+  .circle.random-on {
+      background-color: #8e2d0f;
+      box-shadow: 0 0 6px #ff463ca5;
+  }
+
+
+ /**********************
+  Image top
+  ***********************/
+
+  .image_container{
+    border-radius: 5px;  
+    padding: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image_container img{
+    width: auto; 
+    height: 400px;
+  }
+
+
+   /**********************
+  Main content
+  ***********************/
+
+  .all_content{
+    position: relative;
+  }
+
+  .floating_nav{
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: #6f6f6f;  
+    font-family: "ABC_oracle_thin";
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 170px;
+  }
+
+  .floating_nav ul{
+    list-style: none;
+  }
+
+  .floating_nav ul li{
+    margin-bottom: 20px;
+  }
+
+  .floating_nav ul li a{
+    color: #6f6f6f;  
+    text-decoration: none;
+  }
+
+  .floating_nav ul li a:hover{
+    color: white;  
+    text-decoration: none;
+  }
+
+  .active_nav {
+    color: white;  
+  }
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    right: 100px;
+}
+
+  .main_content{
+    padding: 40px 0px 100px 0px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+
+
+  .tags{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    color: #6f6f6f;  
+    font-family: "ABC_oracle_thin";
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .title{
+    align-self: stretch;
+    
+    color: white;
+    font-family: "ABC_oracle_light";
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  .body_text{
+    flex: 1 0 0;
+    align-self: stretch;
+
+    font-family: "ABC_oracle_thin";
+    font-size: 14px;
+    color: white;
+  }
+}
+  

@@ -82,15 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle mouse movement and control the trail
   function onMouseMove(e) {
     // Update pointer position, centering the real cursor in the middle, sa well as considering the entire page width and height
-    pointerSquare.style.top = `${e.pageY - 14 / 2}px`;  //this is the width of the pointer square
-    pointerSquare.style.left = `${e.pageX - 14 / 2}px`;
+    pointerSquare.style.top = `${e.clientY - 14 / 2}px`;  //this is the width of the pointer square
+    pointerSquare.style.left = `${e.clientX - 14 / 2}px`;
     
     // Update trail position with more spacing
     trail.forEach((square, index) => {
       const delay = (index + 1) * 35; // Increased spacing between trail squares
       setTimeout(() => {
-        square.style.top = `${e.pageY - 5}px`;
-        square.style.left = `${e.pageX - 5}px`;  //This is the half size of the trail square
+        square.style.top = `${e.clientY - 5}px`;
+        square.style.left = `${e.clientX - 5}px`;  //This is the half size of the trail square
       }, delay);
     });
   }
