@@ -116,6 +116,7 @@
 
   /*Random squares that appear*/
   .random-square {
+    position: absolute;
     width: 10px;
     height: 10px;
     background-color: red;

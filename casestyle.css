@@ -122,6 +122,7 @@
 
   /*Random squares that appear*/
   .random-square {
+    position: absolute;
     width: 10px;
     height: 10px;
     background-color: red;
@@ -374,10 +375,6 @@
     top: 0;
     right: 0;
 
-    color: #6f6f6f;  
-    font-family: "ABC_oracle_thin";
-    font-size: 12px;
-    text-transform: uppercase;
     width: 170px;
   }
 
@@ -386,10 +383,13 @@
   }
 
   .floating_nav ul li{
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .floating_nav ul li a{
+    font-family: "ABC_oracle_thin";
+    font-size: 12px;
+    text-transform: uppercase;
     color: #6f6f6f;  
     text-decoration: none;
   }
@@ -399,7 +399,7 @@
     text-decoration: none;
   }
 
-  .active_nav {
+  .floating_nav ul li a.active_nav {
     color: white;  
   }
 
@@ -442,12 +442,33 @@
   }
 
   .body_text{
-    flex: 1 0 0;
     align-self: stretch;
 
     font-family: "ABC_oracle_thin";
     font-size: 14px;
+    color: #dfdfde;
+  }
+
+  .Subheading{
+    align-self: stretch;
+
+    font-family: "ABC_oracle_light";
+    font-size: 18px;
     color: white;
+  }
+
+  .quotes{
+    margin: 0 auto;
+    width: 100%;
+
+    color: rgb(223, 223, 222);
+    font-size: 18px;
+    font-family: "ITC_garamond_itallic";
+  }
+
+  .body_text b{
+    color: white;
+    font-family: "ABC_oracle_light";
   }
 }
   

@@ -99,67 +99,168 @@
         <div style="padding: 0px 100px;">
 
 
-            <!-- Image -->
-            <div class="image_container" style="background-color: #fdf7f0ec;">
+          <!-- Image -->
+          <div class="image_container" style="background-color: #fdf7f0ec;">
+              <img src="Images/project1.png">
+          </div>
 
-                <img src="Images/project1.png">
-            </div>
+          <!-- Text parent div -->
+          <div class ="all_content">
 
-            <!-- Text parent div -->
-            <div class ="all_content">
+              <!-- Fixed div for floating navbar-->
+              <div class="floating_nav">
+                  <ul>
+                      <li>
+                          <a href="#about">About</a>
+                      </li>
+                      <li>
+                          <a href="#buckets">buckets</a>
+                      </li>
+                      <li>
+                          <a href="#solution">solution</a>
+                      </li>
+                  </ul>
+              </div>
 
-                <!-- Fixed div for floating navbar-->
-                <div class="floating_nav">
-                    <ul>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#buckets">buckets</a>
-                        </li>
-                        <li>
-                            <a href="#solution">solution</a>
-                        </li>
-                    </ul>
+              <!-- This is the central div for the entire case study -->
+              <div class="main_content">
+
+                <div class="tags">
+                    <p>☉ Bengaluru</p>
+                    <p>UX design</p>
+                    <p>Intern</p>
+                    <p>May - July 2024</p>
                 </div>
 
-                 <!-- This is the central div for the entire case study -->
-                 <div class="main_content">
+                </br>
 
-                    <div class="tags">
-                        <p>UX design</p>
-                        <p>Internship</p>
-                        <p>May - July 2024</p>
-                    </div>
+                <section id="about">
+                <p class="title">
+                    Helping Nutanix build a unified storage access platform
+                </p>
+                </section>
 
-                    <section id="about">
-                    <p class="title">
-                        Helping Nutanix build a unified storage access platform
-                    </p>
-                    </section>
+                <section id="buckets">
+                <p class="body_text">
+                  In the summer of 2024 I worked with the amazing design team at Nutanix that
+                  helped me challenge myself on multiple levels. My work there included pitching 
+                  ideas to decision makers like the Product Manager, regular syncs with lead 
+                  developers, and project discussions with other designers.
+                </p>
+                <br>
+                <p class ="quotes">
+                  The outcome was a balanced and simple experience for businesses to access their cloud and
+                  private storage via a single shared URL. enhancing nutanix&#39;s hybrid multi cloud strategy.
+                </p>
+                </section>
+                </br>
 
-                    <section id="buckets">
-                    <p class="body_text">
-                        In the summer of 2024 I worked with the amazing design team at Nutanix.
-                        My work there included pitching ideas to decision makers like the Product 
-                        Manager, regular syncs with lead developers, and project discussions with
-                        other designers.
-                    </p>
-                    </section>
+                <p class="Subheading">
+                  Chapter 1: Understanding Nutanix and data centers
+                </p>
 
-                   
+                <p class="body_text">
+                  In the begining of my internship, I enaged in frequent back and forth with key stakeholders of the project
+                  to understand the context, stakeholder's perspectives, and build rapport.
+              
+                  <br><br>
+                  Have you ever wondered what kind of data centers does the military use? What about large 
+                  established businesses, hospitals, insurance companies?
+                  In a statistic published by Cloudzero, over <b>80% of organizations use a 
+                  mix of private and public cloud</b>, for business resiliency, efficiency and its cost effectiveness.
+                  This mix, called a <b>hybrid multi cloud setup</b>, lets businesses
+                   access the best of both worlds.
+                </p>
+
+                  <img src="images/hybridcloud.png">
+
+                <p class="body_text">
+                  Nutanix&#39;s primary offering is the <b>Prism operating system</b>, designed to operate on private data centers making them as 
+                  seamless as public data centers. (a.k.a. "the cloud")
+                </p>
+
+                <p class="body_text">
+                  <b>OBJECTS STORAGE & FEDERATIONS</b>
+                  <br>
+                  In data centers, unorganized data like videos and images are stored in so called <b>data lakes</b>.
+                  These data lakes implement the<b> Objects Storage System</b>, that works like a valet service.
+                  you give to and receive data from the object's manager, without having to worry about where it gets stored iside the lake.
+                </p>
+
+                <div>
+                  <div>
+                  <img src="images/objectsinfras.png" style="width: 75%; float: left; margin-right: 10px;">
+                  </div>
+
+                  <div>
+                    
+                  <p class="body_text">
+                    <br><br>
+                    
+                    <b>✪ Objects store</b>
+                    <br>
+                    Large amounts of physically-connected storage forms an objects store.
+                  </p>
+
+                  <img src="images/Downarrow.svg" style="margin: 10px 6% -10px 6%; opacity: .5;">
+
+                  <p class="body_text">
+                    <br><br>
+                    
+                    <b>✪ Data centers</b>
+                    <br>
+                    Each object store in a data center has its own access URL.
+                  </p>
+
+                  <img src="images/Downarrow.svg" style="margin: 10px 6% -10px 6%; opacity: .5;">
+
+                  <p class="body_text">
+                    <br><br>
+                    
+                    <b>✪ Federated URLs</b>
+                    <br>
+                    A federated URL provides a single access point for all of its connected URLs.
+                  </p>
+
+                  </div>
+
+                </div>
+
+                <br>
+                
+                <div>
+
+                  <div>
+                  <img src="images/apicall.png" style="width: 45%; float: right; margin-left: 25px;">
+                  </div>
+
+                  <p class="body_text">
+                    <b>Buckets</b>
+                    <br>
+                    Finally, an Object store can be divided into logical sections for Access control, ease of use, etc. 
+                    In a real life scenario, <b>an application would ping multiple buckets located in different Object stores</b> to store and access data.
+                  </p>
+
+                </div>
+                  
 
 
-                 </div>
-                 <section id="solution">
 
-                 <div style="height: 1500px;"></div>
-</section>
-            </div>
 
+
+
+
+              </div>
+                <section id="solution">
+
+                <div style="height: 1500px;"></div>
+                </section>
+              
+
+
+          </div>
 
         </div>
-
 
 
 

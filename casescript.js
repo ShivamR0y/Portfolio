@@ -216,7 +216,7 @@ window.addEventListener('scroll', function() {
     }
   });
   
-
+// JavaScript to handle sticking of right navbar
   document.addEventListener('scroll', function () {
     const fixedDiv = document.querySelector('.floating_nav');
     const parent = document.querySelector('.all_content');
@@ -235,12 +235,12 @@ window.addEventListener('scroll', function() {
 const sections = document.querySelectorAll("section[id]");
 
 // Add an event listener listening for scroll
-document.addEventListener("scroll", navHighlighter);
+window.addEventListener("scroll", navHighlighter);
 
 function navHighlighter() {
   
   // Get current scroll position
-  let scrollY = window.pageYOffset;
+  let scrollY = window.scrollY || window.pageYOffset;
   
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
@@ -256,9 +256,10 @@ function navHighlighter() {
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
     ){
-      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active_nav");
-    } else {
-      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active_nav");
+      document.querySelector(".floating_nav a[href*=" + sectionId + "]").classList.add("active_nav");
     }
-  });
-}
+    else {
+      document.querySelector(".floating_nav a[href*=" + sectionId + "]").classList.remove("active_nav");
+    }
+  })};
+
