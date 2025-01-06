@@ -51,7 +51,8 @@
             </svg>
           </a>
           
-            <svg class="nav-icon small-icon active" id="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
+          <a href="playground.html" aria-label="Play">
+            <svg class="nav-icon small-icon" id="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
               <rect opacity="0.7" x="41.832" y="125.499" width="41.833" height="41.833"  />
               <rect x="-0.00195312" y="125.499" width="41.833" height="41.833"  />
               <rect x="-0.00195312" y="83.666" width="41.833" height="41.833"  />
@@ -71,7 +72,8 @@
               <rect opacity="0.5" x="41.832" width="41.833" height="41.833"  />
               <path d="M73.9599 147.216C75.6734 147.216 77.137 146.788 78.3507 145.931C79.5645 145.038 80.1713 143.736 80.1713 142.022C80.1713 140.273 79.5645 138.97 78.3507 138.113C77.1727 137.256 75.7091 136.828 73.9599 136.828H68.8195L69.7833 135.864V167.296H60.734V129.813H74.656C77.4405 129.813 79.9571 130.295 82.2061 131.259C84.455 132.187 86.2399 133.58 87.5607 135.436C88.8815 137.256 89.5419 139.452 89.5419 142.022C89.5419 144.664 88.8815 146.93 87.5607 148.822C86.2399 150.679 84.4372 152.107 82.1525 153.106C79.9036 154.07 77.4048 154.552 74.656 154.552H68.9266V147.216H73.9599ZM101.629 129.813H110.678V160.281L109.714 159.318H125.671V167.296H101.629V129.813ZM146.379 129.813H156.927L169.725 167.296H160.087L153.929 146.359C152.929 143.039 152.144 140.362 151.573 138.327H151.519C150.948 140.398 150.163 143.057 149.163 146.306L142.845 167.296H133.474L146.379 129.813ZM142.898 153.374H160.087L162.443 160.71H140.435L142.898 153.374ZM185.721 151.125L186.203 152.892L172.281 129.813H183.097L186.792 136.453C187.613 137.917 188.112 138.863 188.291 139.291C189.255 141.112 189.987 142.575 190.486 143.682H190.593C190.915 142.932 191.2 142.272 191.45 141.701C191.736 141.13 192.057 140.487 192.414 139.773C193.021 138.631 193.628 137.524 194.235 136.453L197.822 129.813H208.103L194.288 152.731L194.77 150.964V167.296H185.721V151.125Z" fill="#0A0A0A"/>
             </svg>
-  
+          </a>
+
           <a href="index.html" aria-label="Home">
             <svg class="nav-icon small-icon" id="icon3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 183">
               <rect x="46.1641" y="15.1653" width="41.833" height="41.833"  />
@@ -111,14 +113,20 @@
               <div class="floating_nav">
                   <ul>
                       <li>
-                          <a href="#about">About</a>
+                          <a href="#Chapter1">Understanding Nutanix and data centers </a>
                       </li>
                       <li>
-                          <a href="#buckets">buckets</a>
+                          <a href="#Chapter2">Understanding the users </a>
                       </li>
                       <li>
-                          <a href="#solution">solution</a>
+                          <a href="#Chapter3"> Ideas and the breakthrough </a>
                       </li>
+                      <li>
+                        <a href="#Chapter4">  The final showdown  </a>
+                    </li>
+                    <li>
+                      <a href="#Chapter5"> Feedback and learnings </a>
+                  </li>
                   </ul>
               </div>
 
@@ -134,13 +142,11 @@
 
                 </br>
 
-                <section id="about">
+                
                 <p class="title">
                     Helping Nutanix build a unified storage access platform
                 </p>
-                </section>
-
-                <section id="buckets">
+                
                 <p class="body_text">
                   In the summer of 2024 I worked with the amazing design team at Nutanix that
                   helped me challenge myself on multiple levels. My work there included pitching 
@@ -152,15 +158,19 @@
                   The outcome was a balanced and simple experience for businesses to access their cloud and
                   private storage via a single shared URL. enhancing nutanix&#39;s hybrid multi cloud strategy.
                 </p>
-                </section>
+                
+               
+
+
+                <section id="Chapter1">
+
                 </br>
-
-
                 <!-- Chapter 1 -->
 
                 <p class="Subheading">
                   Chapter 1: Understanding Nutanix and data centers
                 </p>
+                <br>
 
                 <p class="body_text">
                   In the begining of my internship, I enaged in frequent back and forth with key stakeholders of the project
@@ -174,13 +184,17 @@
                   This mix, called a <b>hybrid multi cloud setup</b>, lets businesses
                    access the best of both worlds.
                 </p>
+                <br>
 
-                  <img src="Images/hybridcloud.png">
+                  <img src="Images/hybridcloud.png" style="width: 100%;">
+                  <br><br>
 
                 <p class="body_text">
                   Nutanix&#39;s primary offering is the <b>Prism operating system</b>, designed to operate on private data centers making them as 
                   seamless as public data centers. (a.k.a. "the cloud")
                 </p>
+
+                <br>
 
                 <p class="body_text">
                   <b>Objects Storage & Federations</b>
@@ -189,6 +203,8 @@
                   These data lakes implement the<b> Objects Storage System</b>, that works like a valet service.
                   you give to and receive data from the object's manager, without having to worry about where it gets stored iside the lake.
                 </p>
+
+                <br>
 
                 <div>
                   <div>
@@ -204,6 +220,7 @@
                     <br>
                     Large amounts of physically-connected storage forms an objects store.
                   </p>
+                  
 
                   <img src="Images/Downarrow.svg" style="margin: 10px 6% -10px 6%; opacity: .5;">
 
@@ -229,7 +246,7 @@
 
                 </div>
 
-                <br>
+                <br><br><br><br><br><br><br>
 
                 <div>
 
@@ -245,20 +262,26 @@
                       in different Object stores</b> to store and access data.
                   </p>
 
-                  <br><br><br>
+                  <br><br><br><br>
                   <p class ="quotes">
                     The problem? Federation as a feature only existed for private data centers.
                   </p>
 
                 </div>
 
+              </section>
+
+
+
+              <section id="Chapter2">
+
+                <br><br>
 
                 <!-- Chapter 2 -->
-
-                <br>
                 <p class="Subheading">
                   Chapter 2: Understanding the users
                 </p>
+                <br>
 
                 <p class="body_text">
                   Now with the goal of making federations a true hybrid multi cloud feature, I conducted a second round of 
@@ -308,6 +331,8 @@
 
                 </div>
 
+                <br>
+
                 <p class="body_text">
                   <b>How do they work?</b>
                   <br>
@@ -317,31 +342,44 @@
                   admin creates the bucket and shares it to the end user.
                 </p>
 
-                <br>
+                </section>
+
+
+                <section id="Chapter3">
+
+                <br><br>
 
                  <!-- Chapter 3 -->
                 <p class="Subheading">
                   Chapter 3: Ideas and the breakthrough
                 </p>
+                <br>
 
                 <p class="body_text">
                 The biggest challenge we faced was deciding on an Object Store equivalent for external storage.
                 Each cloud provider has a different approach to storage infrastructure.
                 </p>
+                <br>
 
             
                 <p class="body_text">
                   <b>Understanding the black box</b>
+
                   <br>
+
                   Let's simplify everything with the help of a metaphor. You have files on your laptop, as well as on google drive.
                    If you wanted to create a central access point for your relevant files on your laptop, would you add,
                   </p>
+
+                  <br>
 
                   <ol class="body_text" style="margin-left: 10% ;"> 
                     <li>Just the relevant folders, individually</li> 
                     <li>A single parent folder that contains all relevant sub folders inside</li> 
                     <li>The entire google drive account along with its permissions</li> 
                   </ol>
+
+                  <br>
 
                   <p class="body_text">
                     Slap role-based access control on top of it for three different users and you have the problem at hand.
@@ -353,39 +391,58 @@
                     Using the well developed design library, I was able to quickly design major flows for these three approaches, to
                     present to the stakeholders.
                   </p>
-               
-                  <img src="Images/Approachesnuta.svg">
 
                   <br>
+               
+                  <img src="Images/Approachesnuta.svg" style="width: 100%;">
+
+                  <br><br>
 
                   <p class ="quotes">
                     Adding external storage locations hit the right balance & achieved consensus amongst stakeholders.
                   </p>
 
+                  </section>
+
+
+                  <section id="Chapter4">
 
                    <!-- Chapter 4 -->
-                  <br>
+                  <br><br>
                   <p class="Subheading">
                     Chapter 4: The final showdown
                   </p>
 
+                  <br>
 
                   <p class="body_text">
                     With the approach set, I covered all aspects of the setup using the CRUD framework - Create ✦ Read ✦ Update ✦ Delete.
                     Let us look at one of the major flows, as discussed earlier, of adding a bucket to a federation.
                   </p>
 
+                  <br>
+
                   <p class="body_text">
                     <b>Prism OS's Federation admin page</b>
                     <br>
                     The page shows a summary of the federation, a table of member Object Stores, and an empty table to add external endpoints(storage points).
                   </p>
-                  <img src="Images/PC Federationempty.png">
+
+                  <br>
+
+                  <img src="Images/PC Federationempty.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     The PC admin now clicks on add a new External Endpoint
                   </p>
-                  <img src="NutaImages/addnewmembernuta.png">
+
+                  <br>
+
+                  <img src="NutaImages/addnewmembernuta.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>Add external endpoint</b>
@@ -394,13 +451,21 @@
                     The illustration dynamically updates with the form.
                   </p>
 
-                  <img src="NutaImages/Form.png">
+                  <br>
+
+                  <img src="NutaImages/Form.png" style="width: 100%;">
                   
+                  <br><br>
+
                   <p class="body_text">
                     After hitting save, the new endpoint appears on the federation page. With this, The PC admin role is over.
                   </p>
 
-                  <img src="NutaImages/Endpointlist.png">
+                  <br>
+
+                  <img src="NutaImages/Endpointlist.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>Sub admin Federation view</b>
@@ -408,13 +473,21 @@
                    Next, the Sub admin will log onto their view of the Federation, to create a new bucket.
                   </p>
 
-                  <img src="NutaImages/Federation_sub_admin.png">
+                  <br>
+
+                  <img src="NutaImages/Federation_sub_admin.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     The Sub admin now selects the option to add an external bucket.
                   </p>
 
-                  <img src="NutaImages/Add_bucket.png">
+                  <br>
+
+                  <img src="NutaImages/Add_bucket.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>Add external bucket</b>
@@ -422,20 +495,32 @@
                     A new form appears, this time for the details of the bucket.
                   </p>
 
-                  <img src="NutaImages/Bucket_details.png">
+                  <br>
+
+                  <img src="NutaImages/Bucket_details.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     A new bucket appears in the list of buckets. This bucket needs to be shared with the End user.
                   </p>
 
-                  <img src="NutaImages/Bucket_list.png">
+                  <br>
+
+                  <img src="NutaImages/Bucket_list.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     The Sub admin selects the bucket and clicks share. In the new page, they enter the details of the End user to share to. 
                     With this, the Sub admin role is over.
                   </p>
 
-                  <img src="NutaImages/share_bucket.png">
+                  <br>
+
+                  <img src="NutaImages/share_bucket.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>End user Federation view</b>
@@ -443,8 +528,11 @@
                     Finally, the End user is able to log on to their version of federation and access the bucket shared to them!
                   </p>
 
-                  <img src="NutaImages/End_user_fed.png">
+                  <br>
 
+                  <img src="NutaImages/End_user_fed.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     With this, ends the first and the most important flow in the entire feature.
@@ -460,9 +548,11 @@
                     and collaborated with the content team to write the error messages.
                   </p>
 
-                  <img src="NutaImages/Errors.png">
-
                   <br>
+
+                  <img src="NutaImages/Errors.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>Accessibility</b>
@@ -471,9 +561,11 @@
                     and alt text for buttons.
                   </p>
 
-                  <img src="NutaImages/Accessibility.png">
-
                   <br>
+
+                  <img src="NutaImages/Accessibility.png" style="width: 100%;">
+
+                  <br><br>
 
                   <p class="body_text">
                     <b>Handoff</b>
@@ -482,14 +574,24 @@
                     where I highlighted every change made for future reference and ease of understanding.
                   </p>
 
-                  <img src="NutaImages/Handoff.png">
+                  <br>
 
+                  <img src="NutaImages/Handoff.png" style="width: 100%;">
+
+                  <br>
+                  
+                  </section>
+
+                  
+                  <section id="Chapter5">
 
                    <!-- Chapter 5 -->
-                   <br>
+                   <br><br>
                    <p class="Subheading">
                      Chapter 5: Feedback and learnings
                    </p>
+
+                   <br>
 
                    <p class="body_text">
                     Towards the end of the internship, Nutanix organized an exhibition 
@@ -498,49 +600,68 @@
                     exciting and bustling with energy, I also got valuable insights on the project and vision of Objects storage. 
                   </p>
 
+                  <br>
 
                   <p class ="quotes">
                     Feedback
                   </p>
+
+                  <br>
 
                   <p class="body_text">
                     &quot;  Shivam was quick to understand the domain quite well even though he had limited time.
                     He had multiple iterations with the product team and  brainstormed on multiple solutions 
                     for federation to cloud from admin and end users perspective. &quot;  
                   </p>
+
+                  <br>
                   <p class="body_text">
                     &quot;  He worked on one of the features which fits very well into our hybrid multicloud
                      strategy and was able to deliver a good  experience which well was balanced with technical 
                      limitations we have. &quot;  
                   </p>
 
+                  <br>
+
                   <p class ="quotes">
                     Learnings
                   </p>
+
+                  <br>
 
                   <p class="body_text">
                     • <b>Designers are users advocates </b> in between Developers who might want to ship the
                      easiest solution and PM who might want the most marketable features.
                   </p>
 
+                  <br>
+
                   <p class="body_text">
                     • <b>User is not always the customer </b> sometimes the person buying the product might be a 
                     Chief Officer of the company and the person using it an understaffed IT admin. 
                   </p>
+
+                  <br>
 
                   <p class="body_text">
                     • Get frequent feedback on rough ideas instead of polished outputs people are 
                     less likely to criticize well polished outputs.
                   </p>
 
+                  <br>
+
                   <p class="body_text">
                     • Don&#39;t forget to have fun,  &quot; you are a 20 year old in Bangalore with disposable income,
                      you will never have this again &quot;  - a fun guy :P
                   </p>
 
+                  <br>
+
                   <p class ="quotes">
                     Thank You!
                   </p>
+
+                  <br>
 
                   <p class ="body_text" style="font-size: 10px; color: rgba(255, 255, 255, 0.389);">
                     Confidentiality and Liability Notice:<br>
@@ -554,6 +675,7 @@
                     case study, or any affiliated parties, shall not be held liable for any unauthorized dissemination or use of this information.
                   </p>
 
+                  </section>
 
 
               </div>

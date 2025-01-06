@@ -470,5 +470,8 @@
     color: white;
     font-family: "ABC_oracle_light";
   }
+  .main_content img{
+   width: 100%;
+  }
 }
   

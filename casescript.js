@@ -240,7 +240,7 @@ window.addEventListener("scroll", navHighlighter);
 function navHighlighter() {
   
   // Get current scroll position
-  let scrollY = window.scrollY || window.pageYOffset;
+  let scrollY =  window.pageYOffset;
   
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach(current => {
