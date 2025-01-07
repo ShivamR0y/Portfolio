@@ -383,7 +383,7 @@
   }
 
   .floating_nav ul li{
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .floating_nav ul li a{
@@ -418,6 +418,9 @@
     flex-direction: column;
     gap:25px;
 
+  .main_content img{
+    width: 100%;
+   }
 
   .tags{
     display: flex;
@@ -449,6 +452,17 @@
     color: #dfdfde;
   }
 
+  .body_text b{
+    color: white;
+    font-family: "ABC_oracle_light";
+  }
+
+  .body_text a{
+    text-decoration: underline;
+    color: #dfdfde;
+    font-family: "ABC_oracle_thin";
+  }
+
   .Subheading{
     align-self: stretch;
 
@@ -458,20 +472,13 @@
   }
 
   .quotes{
-    margin: 0 auto;
+    margin: 15px auto;
     width: 100%;
 
     color: rgb(223, 223, 222);
-    font-size: 18px;
+    font-size: 20px;
     font-family: "ITC_garamond_itallic";
   }
 
-  .body_text b{
-    color: white;
-    font-family: "ABC_oracle_light";
-  }
-  .main_content img{
-   width: 100%;
-  }
 }
   
