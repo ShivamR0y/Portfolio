@@ -420,6 +420,7 @@
 
   .main_content img{
     margin: 40px auto;
+    display: block;
    }
 
   .tags{
