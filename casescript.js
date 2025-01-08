@@ -263,3 +263,71 @@ function navHighlighter() {
     }
   })};
 
+
+
+
+
+
+   /*
+    Carousel 
+    */
+
+  let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+// Clone the first item and append it at the end to create the loop effect
+const firstItem = items[0].cloneNode(true);
+carousel.appendChild(firstItem);
+
+// Function to move to the next item
+function moveToNext() {
+    // Check if we are at the last item (which is a duplicate of the first)
+    if (currentIndex === totalItems) {
+        // Jump back to the first real item without animation
+        currentIndex = 0;
+        carousel.style.transition = 'none';
+        updateCarousel();
+        setTimeout(() => {
+            carousel.style.transition = 'transform 0.5s ease';
+        }, 50);
+    } else {
+        currentIndex++;
+        updateCarousel();
+    }
+}
+
+// Function to move to the previous item
+function moveToPrev() {
+    if (currentIndex === 0) {
+        // Jump to the last real item (second-to-last in the carousel)
+        currentIndex = totalItems - 1;
+        carousel.style.transition = 'none';
+        updateCarousel();
+        setTimeout(() => {
+            carousel.style.transition = 'transform 0.5s ease';
+        }, 50);
+    } else {
+        currentIndex--;
+        updateCarousel();
+    }
+}
+
+// Function to update the carousel position
+function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Event listeners for the navigation buttons
+nextBtn.addEventListener('click', moveToNext);
+prevBtn.addEventListener('click', moveToPrev);
+
+// Auto-slide every 3 seconds
+setInterval(moveToNext, 5000);
+
+// Initial call to set the correct item
+updateCarousel();

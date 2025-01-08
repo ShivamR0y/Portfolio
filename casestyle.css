@@ -403,23 +403,23 @@
     color: white;  
   }
 
-
   .sticky {
     position: fixed;
     top: 0;
     right: 100px;
 }
 
+
   .main_content{
-    padding: 40px 0px 100px 0px;
+    padding: 40px 0px 60px 0px;
     width: 52%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap:25px;
+  }
 
   .main_content img{
-    width: 100%;
+    margin: 40px auto;
    }
 
   .tags{
@@ -436,6 +436,7 @@
 
   .title{
     align-self: stretch;
+    margin:25px 0px;
     
     color: white;
     font-family: "ABC_oracle_light";
@@ -465,6 +466,7 @@
 
   .Subheading{
     align-self: stretch;
+    margin: 40px 0px 25px 0px;
 
     font-family: "ABC_oracle_light";
     font-size: 18px;
@@ -472,7 +474,7 @@
   }
 
   .quotes{
-    margin: 15px auto;
+    margin: 40px auto;
     width: 100%;
 
     color: rgb(223, 223, 222);
@@ -480,5 +482,72 @@
     font-family: "ITC_garamond_itallic";
   }
 
-}
+
+   /**********************
+  Carousel
+  ***********************/
   
+.Continue_reading{
+  width: 45%; 
+  margin: 0px auto 100px auto;
+  color: #ffffff66; 
+  font-family: "ABC_oracle_light"; 
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.Continue_reading img{
+  padding: 25px;
+  height: 300px;  
+  display: block;
+  margin: auto;
+}
+
+.Continue_reading p{
+  color: white;
+  font-family: ABC_oracle_light;
+  font-size: 20px;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin: 15px 0px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+button {
+  font-family: "ABC_oracle_thin";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(232, 232, 232, 0);
+  color: rgb(33, 33, 33);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.173);
+}
