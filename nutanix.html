@@ -147,10 +147,12 @@
                 </p>
                 
                 <p class="body_text">
-                  In the summer of 2024 I worked with the amazing design team at Nutanix that
+                  
+                  In the summer of 2024 I worked over with the amazing design team at Nutanix, that
                   helped me challenge myself on multiple levels. My work there included pitching 
                   ideas to decision makers like the Product Manager, regular syncs with lead 
                   developers, and project discussions with other designers.
+                
                 </p>
 
                 <p class ="quotes">
@@ -173,13 +175,13 @@
 
                 <p class="body_text">
                   In the begining of my internship, I enaged in frequent back and forth with key stakeholders of the project
-                  to understand the context, stakeholder's perspectives, and build rapport.
+                  to understand the context, their perspectives, and build rapport.
               
                   <br><br>
                   Have you ever wondered what kind of data centers does the military use? What about large 
-                  established businesses, hospitals, insurance companies?
-                  In a statistic published by Cloudzero, over <b>80% of organizations use a 
-                  mix of private and public cloud</b>, for business resiliency, efficiency and its cost effectiveness.
+                  businesses, hospitals, banks?
+                  In a statistic published by Cloudzero, over <b>80% of all organizations use a 
+                  mix of private and public cloud. </b> This ensures business resiliency, efficiency and cost effectiveness.
                   This mix, called a <b>hybrid multi cloud setup</b>, lets businesses
                    access the best of both worlds.
                 </p>
@@ -188,15 +190,17 @@
 
                 <p class="body_text">
                   Nutanix&#39;s primary offering is the <b>Prism operating system</b>, designed to operate on private data centers making them as 
-                  seamless as public data centers. (a.k.a. "the cloud")
+                  seamless as public data centers (a.k.a. "the cloud"). Picture it like renting a laptop with a pre-installed OS (Cloud storage) 
+                  vs Building your own PC and renting an OS of your choice (Private storage).
                   
                   <br><br>
                 
                   <b>Objects Storage & Federations</b>
                   <br>
-                  In data centers, unorganized data like videos and images are stored in so called <b>data lakes</b>.
-                  These data lakes implement the<b> Objects Storage System</b>, that works like a valet service.
-                  you give to and receive data from the object's manager, without having to worry about where it gets stored iside the lake.
+                  In data centers large amounts of unorganized data like videos and images - in magnitude of petabytes, are stored in so called
+                  <b>data lakes</b>. These data lakes implement the <b> Objects Storage System</b>, that works similar to a valet service.
+                  You give and receive data from the <b>object's manager</b>, without having to worry about where it gets stored iside the lake.
+                  This storage is further scaled as follows.
                 </p>
 
                 
@@ -221,7 +225,7 @@
 
                     <b>✪ Data centers</b>
                     <br>
-                    Each object store in a data center has its own access URL.
+                    Each object store in a data center has a unique URL.
 
                     <br>
                     <img src="NutaImages/Downarrow.svg" style="margin: 18px 6% 18px 8%; opacity: .5;">
@@ -229,7 +233,7 @@
                     
                     <b>✪ Federated URLs</b>
                     <br>
-                    A federated URL provides a single access point for all of its connected URLs.
+                    A federated URL is a single access point for all of its member object stores.
                   </p>
 
                 </div>
@@ -247,13 +251,13 @@
                     <b>Buckets</b>
                     <br>
                     Finally, an Object store can be divided into logical sections for Access control, ease of use, etc. 
-                    In a real life scenario, <b>an application would ping multiple buckets located 
-                    in different Object stores</b> to store and access data.
+                    In a real life scenario <b>an application would ping multiple buckets located 
+                    in different object stores</b> to store and access different data. <br><br>Because federated URLs exist, 
+                    the application uses only one URL to access all member buckets.
                   </p>
 
-                  <br>
                   <p class ="quotes">
-                    The problem? Federation as a feature only existed for private data centers.
+                    The problem? Federated URLs as a feature only supported private data centers.
                   </p>
 
                 </div>
@@ -275,18 +279,18 @@
 
                 <p class="body_text">
                   
-                  Now with the goal of making federations a true hybrid multi cloud feature, I conducted a second round of 
-                  stakeholder analysis. This helped me identify user archetypes and their associated roles.
-                  Futher reading through the PRD gave me an idea of the scope and future plans for the feature.
-
+                  Now the goal was making federations a true hybrid multi cloud feature. Reading through the PRD gave me an 
+                  idea of the scope and future plans for the feature. I conducted another round of 
+                  stakeholder analysis which helped me identify user archetypes and their associated roles -
+                 
                   <br>
                   <img src="NutaImages/PCadmin.png" style="width: 100px; float: right; margin-left: 25px; margin: 0;">
                   <br>
 
                   <b>PC admin</b>
                   <br>
-                  IT admins with access to admin section of Prism OS.
-                  Sets up Object Stores and manage physical infrastructure. Creates users and their permissions, access and roles.
+                  IT admins with access to the admin section of Prism OS.
+                  Sets up Object Stores and manage physical infrastructure. Creates users, their permissions, access and roles.
                 
                   <br>
                   <img src="NutaImages/Subadmin.png" style="width: 100px; float: right; margin-left: 25px; margin: 0">
@@ -295,7 +299,7 @@
                   <b>Sub admin</b>
                   <br>
                   Managers that ensure smooth communication between PC admin and End user. 
-                  Creates buckets in Objects Stores and shares with End user.
+                  Creates buckets in Objects Stores as per end user requirements.
                 
                   <br>
                   <img src="NutaImages/Enduser.png" style="width: 100px; float: right; margin-left: 25px; margin: 0">
@@ -303,16 +307,16 @@
 
                   <b>End user</b>
                   <br>
-                  Engineers working on applications. Asks the sub admin to create
-                  relevant buckets. Pings the federation with get/put requests.
+                  Engineers working on applications. Wants to access
+                  relevant buckets, Pings the federation with get/put requests.
 
                   <br> <br>
-                  <b>How do they work?</b>
+                  <b>How do they co-ordinate?</b>
                   <br>
                   Suppose the end user is working on an application that needs to access a particular 
-                  bucket in an Object Store. The Object Store is not a member of the Federation that the app runs on, 
-                  so the sub admin would requests the PC admin to add it to the Federation. Then, the sub
-                  admin creates the bucket and shares it to the end user.
+                  bucket in an Object Store. However the Object Store is not a member of the Federation that the app runs on. 
+                  Now the sub admin requests the PC admin to add it to the Federation. After which the sub
+                  admin creates a bucket and shares it to the end user.
                 </p>
 
                 </section>
@@ -331,22 +335,23 @@
                 </p>
 
                 <p class="body_text">
-                  The biggest challenge we faced was deciding on an Object Store equivalent for external storage.
-                  Each cloud provider has a different approach to storage infrastructure.
+                  To integrate URLs of external storage providers into the Federated URLs, we needed to decide the
+                  'Object Store' equivalent for external storage. Each cloud provider has a different approach to 
+                  Objects storage infrastructure.
                
                   <br><br>
 
                   <b>Understanding the black box</b>
                   <br>
 
-                  Let's simplify everything with the help of a metaphor. You have files on your laptop, as well as on google drive.
+                  Let's simplify things with the help of a metaphor. You have files both on your laptop, and on google drive.
                    If you wanted to create a central access point for your relevant files on your laptop, would you add,
                 </p>
 
                 <br>
 
                 <ol class="body_text" style="margin-left: 8% ;"> 
-                  <li>Just the relevant folders, individually</li> 
+                  <li>Just the folders you want, individually</li> 
                   <li>A single parent folder that contains all relevant sub folders inside</li> 
                   <li>The entire google drive account along with its permissions</li> 
                 </ol>
@@ -354,12 +359,12 @@
                 <br>
 
                 <p class="body_text">
-                  Slap role-based access control on top of it for three different users and you have the problem at hand.
+                  Add role-based access control on top of this for three different users and you have the problem at hand.
 
                   <br><br>
                   <b>Deciding the approach</b>
                   <br>
-                  I came up with <b>six different approaches</b> to the solution, which we narrowed down to three with the help of my mentor.
+                  I came up with <b>six different approaches</b> to the solution, which I narrowed down to three via discussions with my mentor.
                   Using the well developed design library, I was able to quickly design major flows for these three approaches, to
                   present to the stakeholders.
                 </p>
@@ -395,7 +400,7 @@
 
                   <b>Prism OS's Federation admin page</b>
                   <br>
-                  The page shows a summary of the federation, a table of member Object Stores, and an empty table to add external endpoints(storage points).
+                  The page shows a summary of the federation, a table of member Object Stores, and an empty table to add external endpoints (storage locations).
                   
                   <br>
                   <img src="NutaImages/PC Federationempty.png" style="width: 100%;">
@@ -483,7 +488,7 @@
 
                   <b>Accessibility</b>
                   <br>
-                  Further, I performed a small accessibility audit on the designs, which included identifying screen reader order, 
+                  Further, I performed an accessibility audit on the designs, which included identifying screen reader order, 
                   and alt text for buttons.
 
                   <br>
@@ -555,7 +560,7 @@
                   
                   <br> <br>
 
-                    • Get frequent feedback on rough ideas instead of polished outputs people are 
+                    • Get frequent feedback on rough ideas instead of polished outputs, people are 
                     less likely to criticize well polished outputs.
                   
                   <br> <br>
